@@ -20,7 +20,7 @@ func TestMain(t *testing.T) {
 	})
 
 	t.Run("saludando frances", func(t *testing.T) {
-		got := Yo("", Bounjour)
+		got := Yo("", Frances)
 		want := "Bounjour Lauty Pelozo"
 
 		assertCorrectMessage(t, got, want)

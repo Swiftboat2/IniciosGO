@@ -1,12 +1,19 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
-const HelloIngles = "Hello "
-const Nombre = "Lauty "
-const Español = "español"
-const Holaespañol = "Hola "
-const Bounjour = "Bounjour "
+const (
+	Nombre = "Lauty "
+
+	Español = "español"
+	Frances = "frances"
+
+	HelloIngles = "Hello "
+	Holaespañol = "Hola "
+	Bounjour    = "Bounjour "
+)
 
 func Yo(apellido string, language string) string {
 	if apellido == "" {
@@ -22,19 +29,21 @@ func Yo(apellido string, language string) string {
 		}
 	*/
 
-	var prefix string
+	return saludandoPrefix(language) + Nombre + apellido
+}
+
+func saludandoPrefix(language string) (prefix string) {
 
 	switch language {
 	case Español:
 		prefix = Holaespañol
-	case Bounjour:
+	case Frances:
 		prefix = Bounjour
 	default:
 		prefix = HelloIngles
-
 	}
 
-	return prefix + Nombre + apellido
+	return
 }
 
 func main() {
