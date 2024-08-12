@@ -5,7 +5,7 @@ import "testing"
 func TestHello(t *testing.T) {
 	t.Run("diciendo hola a la gente", func(t *testing.T) {
 
-		got := Hello("Chris")
+		got := Hello("")
 		want := "Hola Chris"
 		assertCorrectMessage(t, got, want)
 
@@ -18,7 +18,7 @@ func TestHello(t *testing.T) {
 	})
 }
 
-//en got, want string se puede poner una sola vez string al final
+//en got, want string se puede poner una sola vez string al final y afecta a got tambien
 func assertCorrectMessage(t testing.TB, got, want string) {
 	t.Helper()
 	if got != want {
